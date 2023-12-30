@@ -9,15 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
-        child:
-            // Stack(
-            //   children: [
-            //     Image.asset(
-            //       "assets/Passport_pic-removebg-preview.png",
-            //       height: 100,
-            //       width: 200,
-            //     ),
-            Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppBar(
@@ -83,74 +75,110 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(width: 200)
               ],
             ),
-
-            const Padding(
-              padding: EdgeInsets.only(left: 100, top: 200),
-              child: Text(
-                "Flutter Developer",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 1000, top: 90),
+                  child: Image.asset(
+                    "assets/images/webpic1.png",
+                    height: 650,
+                  ),
                 ),
-              ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 300, top: 260),
+                  child: Text(
+                    "Flutter Developer",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 300, top: 300),
+                  child: RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Hii, i'm ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "Saurabh",
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 300, top: 350),
+                  child: Text(
+                    "Kumar From Bihar",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 100, top: 15),
-              child: RichText(
-                text: const TextSpan(
+
+            // const SizedBox(height: 350),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Positioned(
+                  left: 100,
+                  top: 700,
+                  child: Container(
+                    height: 300,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: const Color.fromARGB(255, 37, 37, 37),
+                    ),
+                    child: Image.asset(
+                      "assets/images/Passport_pic-removebg-preview.png",
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextSpan(
-                      text: "Hii, i'm ",
+                    const Text(
+                      "About Me",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
-                    TextSpan(
-                      text: "Saurabh",
-                      style: TextStyle(
-                        color: Colors.pink,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                    ConstrainedBox(
+                      constraints: BoxConstraints.tight(const Size(1000, 90)),
+                      child: const Text(
+                        "I am Saurabh. Basically I am from Bihar but currently staying in udaipur Rajasthan. Currently, I am pursuing B-Tech in Computer Science and Engineering. have knowledge in dart language and also knowledge in Flutter Framework.My strengths are that I am self-motivated and Easy to learn new Technology.I chose a career in software development because I find satisfaction in helping consumers, companies, and organizations find the solutions they need.My hobby is playing cricket.",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          // fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 100, top: 15),
-              child: Text(
-                "Kumar From Bihar",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            // const SizedBox(height: 350),
-            Image.asset("assets/user.png"),
-            const Text(
-              "About Me",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            ConstrainedBox(
-              constraints: BoxConstraints.tight(const Size(1000, 90)),
-              child: const Text(
-                "I am Saurabh. Basically I am from Bihar but currently staying in udaipur Rajasthan. Currently, I am pursuing B-Tech in Computer Science and Engineering. have knowledge in dart language and also knowledge in Flutter Framework.My strengths are that I am self-motivated and Easy to learn new Technology.I chose a career in software development because I find satisfaction in helping consumers, companies, and organizations find the solutions they need.My hobby is playing cricket.",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  // fontWeight: FontWeight.w400,
-                ),
-              ),
+              ],
             ),
             Row(
               children: [
