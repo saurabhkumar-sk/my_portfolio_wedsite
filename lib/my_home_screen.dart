@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_website/models/services_model.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -133,7 +134,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -304,190 +304,364 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            const Padding(
+              padding: EdgeInsets.only(left: 150, top: 20),
+              child: Text(
+                "My Services",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(width: 50),
+            Container(
+              margin: const EdgeInsets.only(right: 300, left: 150, top: 20),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: const Color.fromARGB(255, 37, 37, 37),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.apps_sharp,
+                          color: Colors.red,
+                          size: 60,
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          serviceModel.first.title,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 80, right: 10, bottom: 10),
+                    child: Text(
+                      serviceModel.first.subtitle,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 150, top: 30),
+              child: Text(
+                "My Works",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Ecommerce Application",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " \nClick here to more info.",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "WhatsApp Clone   ",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "\nClick here to more info.",
+                          style: TextStyle(
+                            fontSize: 10,
 
-            const Text(
-              "My Services",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
+                            color: Colors.grey,
+                            // fontWeight: FontWeight.bold,
+                            // fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Todo Application",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " \nClick here to more info.",
+                          style: TextStyle(
+                            fontSize: 10,
+
+                            color: Colors.grey,
+                            // fontWeight: FontWeight.bold,
+                            // fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(
+                  "https://images.unsplash.com/photo-1601972599720-36938d4ecd31?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  height: 500,
+                  width: 380,
+                ),
+                const SizedBox(width: 25),
+                Image.network(
+                  "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  // height: 1000,
+                  width: 400,
+                ),
+                const SizedBox(width: 25),
+                Image.network(
+                  "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  height: 500,
+                  width: 380,
+                ),
+              ],
+            ),
+            const SizedBox(height: 50),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 150),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Contact Me",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 100,
+                    width: 600,
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      cursorColor: Colors.grey,
+                      decoration: InputDecoration(
+                        border:
+                            OutlineInputBorder(borderRadius: BorderRadius.zero),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        filled: true,
+                        fillColor: Color.fromARGB(255, 37, 37, 37),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.blue),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        hintText: "Your Name",
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox(width: 50),
-                Container(
-                  height: 200,
-                  width: 350,
-                  color: Colors.redAccent,
-                  child: Column(
-                    children: [
-                      Text(
-                        serviceModel.first.title,
-                        style: const TextStyle(
-                            // fontSize: 10,
-                            ),
-                      ),
-                      Text(
-                        serviceModel.first.subtitle,
-                        style: const TextStyle(
-                          fontSize: 10,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text("Learn more"),
-                      ),
-                    ],
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.email_rounded,
+                    color: Colors.pink,
+                  ),
+                  label: const Text(
+                    "saurabhkumar91536@gmail.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-                const SizedBox(width: 20),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.redAccent,
-                  child: Column(
-                    children: [
-                      Text(
-                        serviceModel.first.title,
-                        style: const TextStyle(
-                            // fontSize: 10,
-                            ),
-                      ),
-                      Text(
-                        serviceModel.first.subtitle,
-                        style: const TextStyle(
-                          fontSize: 10,
+                const SizedBox(
+                  height: 100,
+                  width: 600,
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    cursorColor: Colors.grey,
+                    decoration: InputDecoration(
+                      border:
+                          OutlineInputBorder(borderRadius: BorderRadius.zero),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text("Learn more"),
+                      filled: true,
+                      fillColor: Color.fromARGB(255, 37, 37, 37),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
                       ),
-                    ],
+                      hintText: "Your Email",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-                const SizedBox(width: 20),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.redAccent,
-                  child: Column(
-                    children: [
-                      Text(
-                        serviceModel.first.title,
-                        style: const TextStyle(
-                            // fontSize: 10,
-                            ),
-                      ),
-                      Text(
-                        serviceModel.first.subtitle,
-                        style: const TextStyle(
-                          fontSize: 10,
+              ],
+            ),
+            Stack(
+              children: [
+                const SizedBox(
+                  height: 500,
+                  width: 600,
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    cursorColor: Colors.grey,
+                    decoration: InputDecoration(
+                      border:
+                          OutlineInputBorder(borderRadius: BorderRadius.zero),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text("Learn more"),
+                      filled: true,
+                      fillColor: Color.fromARGB(255, 37, 37, 37),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
                       ),
-                      const SizedBox(width: 50),
+                      hintText: "Your Email",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextButton.icon(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.phone_android,
+                          color: Colors.pink,
+                        ),
+                        label: const Text("6203002599"),
+                      ),
+                      const Row(
+                        children: [
+                          Icon(
+                            FontAwesomeIcons.facebook,
+                            color: Colors.grey,
+                            size: 40,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.instagram,
+                            color: Colors.grey,
+                            size: 40,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.twitter,
+                            color: Colors.grey,
+                            size: 40,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.linkedinIn,
+                            color: Colors.grey,
+                            size: 40,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 50),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: const Text("Download CV"),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 200),
-
-            // // Stack(
-            // //   children: [
-            // //     Image.network(
-            // //       'https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            // //       fit: BoxFit.cover,
-            // //       width: MediaQuery.of(context).size.width,
-            // //     ),
-            // //     Positioned(
-            // //       left: 200,
-            // //       top: 250,
-            // //       child: RichText(
-            // //         text: TextSpan(
-            // //           children: [
-            // //             TextSpan(
-            // //               text: 'Great ideas  doesn\'t\n',
-            // //               style: TextStyle(
-            // //                 fontWeight: FontWeight.w500,
-            // //                 fontSize: 50,
-            // //                 color: Colors.grey.shade300,
-            // //               ),
-            // //             ),
-            // //             const TextSpan(
-            // //               text: 'need approvals, they\n',
-            // //               style: TextStyle(
-            // //                 fontWeight: FontWeight.bold,
-            // //                 fontSize: 60,
-            // //                 color: Colors.white,
-            // //               ),
-            // //             ),
-            // //             const TextSpan(
-            // //               text: 'need ',
-            // //               style: TextStyle(
-            // //                 fontWeight: FontWeight.bold,
-            // //                 fontSize: 60,
-            // //                 color: Colors.white,
-            // //               ),
-            // //             ),
-            // //             const TextSpan(
-            // //               text: 'Application. \n',
-            // //               style: TextStyle(
-            // //                 fontWeight: FontWeight.bold,
-            // //                 fontSize: 60,
-            // //                 color: Colors.green,
-            // //               ),
-            // //             ),
-            // //           ],
-            // //         ),
-            // //       ),
-            // //     ),
-            // //     Positioned(
-            // //       left: 200,
-            // //       top: 520,
-            // //       child: ElevatedButton(
-            // //         onPressed: () {},
-            // //         style: const ButtonStyle(
-            // //           fixedSize: MaterialStatePropertyAll(Size(150, 50)),
-            // //           backgroundColor: MaterialStatePropertyAll(Colors.cyan),
-            // //           shape: MaterialStatePropertyAll(
-            // //             RoundedRectangleBorder(
-            // //                 borderRadius: BorderRadius.all(Radius.circular(5))),
-            // //           ),
-            // //         ),
-            // //         child: const Text(
-            // //           'Contact us',
-            // //           style: TextStyle(
-            // //             fontSize: 18,
-            // //             color: Colors.white,
-            // //           ),
-            // //         ),
-            // //       ),
-            // //     ),
-            // //   ],
-            // // ),
-            // // Image.asset('assets/images/pexels-cottonbro-studio-5082581.jpg'),
-            // const SizedBox(
-            //   height: 180,
-            // ),
-            // Row(
-            //   children: [
-            //     Padding(
-            //       padding: const EdgeInsets.only(left: 200),
-            //       child: ClipRRect(
-            //         borderRadius: BorderRadius.circular(10),
-            //         child: Image.network(
-            //             'https://images.pexels.com/photos/5082581/pexels-photo-5082581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            // const SizedBox(height: 200),
           ],
         ),
       ),
