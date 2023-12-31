@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                     text: const TextSpan(
                       children: [
                         TextSpan(
-                          text: "Hii, i'm ",
+                          text: "Hi, i'm ",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
@@ -134,68 +134,177 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
 
-            // const SizedBox(height: 350),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Positioned(
-                  left: 100,
-                  top: 700,
+                Padding(
+                  padding: const EdgeInsets.only(left: 150),
                   child: Container(
-                    height: 300,
-                    width: 250,
+                    height: 600,
+                    width: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       color: const Color.fromARGB(255, 37, 37, 37),
                     ),
-                    child: Image.asset(
-                      "assets/images/Passport_pic-removebg-preview.png",
-                      fit: BoxFit.fill,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        "assets/images/Passport_pic-removebg-preview.png",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "About Me",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    ConstrainedBox(
-                      constraints: BoxConstraints.tight(const Size(1000, 90)),
-                      child: const Text(
-                        "I am Saurabh. Basically I am from Bihar but currently staying in udaipur Rajasthan. Currently, I am pursuing B-Tech in Computer Science and Engineering. have knowledge in dart language and also knowledge in Flutter Framework.My strengths are that I am self-motivated and Easy to learn new Technology.I chose a career in software development because I find satisfaction in helping consumers, companies, and organizations find the solutions they need.My hobby is playing cricket.",
+                Padding(
+                  padding: const EdgeInsets.only(left: 50, bottom: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "About Me",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
-                          // fontWeight: FontWeight.w400,
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                  ],
+                      ConstrainedBox(
+                        constraints: BoxConstraints.tight(
+                          const Size(800, 120),
+                        ),
+                        child: const Text(
+                          "I am Saurabh Kumar. Basically I am from Bihar but currently staying in udaipur Rajasthan. Currently, I am pursuing B-Tech in Computer Science and Engineering.I have knowledge in dart language and also knowledge in Flutter Framework.My strengths are that I am self-motivated and Easy to learn new Technology.I chose a career in software development because I find satisfaction in helping consumers, companies, and organizations find the solutions they need.My hobby is playing cricket.",
+                          style: TextStyle(
+                            wordSpacing: 5,
+                            color: Colors.grey,
+                            fontSize: 15,
+                            // fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                      const Text(
+                        "Skills",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      const Text(
+                        "App Develpment",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Building Android/iOS apps(Flutter)",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        "Experiences",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      const Text(
+                        "2023",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Internship Experience: Android Application Development\nThepresence.in, [Udaipur]",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        "2021",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Python training at LearnVern",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        "Educations",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      const Text(
+                        "2020-2024",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Rajasthan Technical University-Kota, B.tech (Computer Science)",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        "2017-2019",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Bihar School Examination Board Patna, Intermediate(12th)",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        "2016-2017",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 222, 78, 126),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "Bihar School Examination Board Patna, High School(10th)",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: const Text("Skills"),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text("Experiences"),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text("Eduction"),
-                ),
-              ],
-            ),
+
             const Text(
               "My Services",
               style: TextStyle(
