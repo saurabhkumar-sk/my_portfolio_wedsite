@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:http/http.dart';
+import 'package:portfolio_website/components/download.dart';
 import 'package:portfolio_website/models/services_model.dart';
 import 'package:portfolio_website/provider/launch_url_provider.dart';
 import 'package:provider/provider.dart';
@@ -765,7 +770,9 @@ class HomeScreen extends StatelessWidget {
                             ),
                             const SizedBox(height: 50),
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                const DownloadingDialog();
+                              },
                               style: ButtonStyle(
                                 backgroundColor: const MaterialStatePropertyAll(
                                   Colors.red,
@@ -822,5 +829,15 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void downloadFile() async {
+    var time = DateTime.now().microsecondsSinceEpoch;
+    var path = "/storage/emulated/0/Download/image-$time.jpg";
+    var file = File(path);
+    var res = await get(
+      Uri.parse("https://picsum.photos/200/300"),
+    );
+    file.writeAsBytes(res.bodyBytes);
   }
 }
