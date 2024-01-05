@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'My Portfolio Website',
         theme: ThemeData(
-          // fontFamily: 'Exo',
+          fontFamily: 'Poppins',
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),

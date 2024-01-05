@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart';
 import 'package:portfolio_website/components/download.dart';
@@ -25,13 +24,14 @@ class HomeScreen extends StatelessWidget {
                 AppBar(
                   backgroundColor: Colors.black,
                   title: const Padding(
-                    padding: EdgeInsets.only(left: 200),
+                    padding: EdgeInsets.only(left: 090),
                     child: Text(
                       'Saurabh.',
                       style: TextStyle(
+                        fontFamily: "Poppins",
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
-                        color: Colors.white,
+                        color: Colors.redAccent,
                       ),
                     ),
                   ),
@@ -801,7 +801,18 @@ class HomeScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 795),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      void downloadFile() async {
+                        var time = DateTime.now().microsecondsSinceEpoch;
+                        var path =
+                            "/storage/emulated/0/Download/image-$time.jpg";
+                        var file = File(path);
+                        var res = await get(
+                          Uri.parse("https://picsum.photos/200/300"),
+                        );
+                        file.writeAsBytes(res.bodyBytes);
+                      }
+                    },
                     style: ButtonStyle(
                       backgroundColor: const MaterialStatePropertyAll(
                         Colors.red,
