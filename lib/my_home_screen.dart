@@ -131,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(left: 300, top: 350),
                       child: Text(
-                        "Kumar From Bihar",
+                        "Kumar ",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
