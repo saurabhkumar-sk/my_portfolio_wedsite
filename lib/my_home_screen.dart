@@ -619,7 +619,9 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          provider.emailLaunchUrls();
+                        },
                         icon: const Icon(
                           Icons.email_rounded,
                           color: Colors.redAccent,
