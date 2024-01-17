@@ -131,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(left: 300, top: 350),
                       child: Text(
-                        "Kumar From Bihar",
+                        "Kumar ",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
@@ -619,7 +619,9 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          provider.emailLaunchUrls();
+                        },
                         icon: const Icon(
                           Icons.email_rounded,
                           color: Colors.redAccent,

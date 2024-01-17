@@ -15,6 +15,8 @@ final ecommercelink =
     Uri.parse('https://github.com/saurabhkumar-sk/my_ecommerce');
 final todolink =
     Uri.parse('https://github.com/saurabhkumar-sk/todo_application');
+final emailLink =
+    Uri.parse('https://mail.google.com/mail/u/0/#inbox?compose=new');
 
 class LaunchUrlProvider extends ChangeNotifier {
   Future<void> faceBookUrlLauncher() async {
@@ -83,6 +85,13 @@ class LaunchUrlProvider extends ChangeNotifier {
   Future<void> todoLaunchUrls() async {
     launchUrl(
       todolink,
+      mode: LaunchMode.inAppBrowserView,
+    );
+  }
+
+  Future<void> emailLaunchUrls() async {
+    launchUrl(
+      emailLink,
       mode: LaunchMode.inAppBrowserView,
     );
   }
